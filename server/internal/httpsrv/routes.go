@@ -42,8 +42,8 @@ func ApplyRoutes(db *gorm.DB, m *mux.Router) {
 
 	// Serves angular application on / endpoint
 
-	//m.PathPrefix("/").Handler(http.FileServer(http.Dir("frontend/dist/fruitshop-ui")))                                                      // for docker
-	m.PathPrefix("/").Handler(http.FileServer(http.Dir("/home/rockey/projects/personalprojects/fruitshop-ref/frontend/dist/fruitshop-ui"))) // for docker
+	m.PathPrefix("/").Handler(http.FileServer(http.Dir("frontend/dist/fruitshop-ui")))                                                      // for docker
+	//m.PathPrefix("/").Handler(http.FileServer(http.Dir("/home/rockey/projects/personalprojects/fruitshop-ref/frontend/dist/fruitshop-ui"))) // for docker
 	//m.PathPrefix("/").Handler(http.FileServer(http.Dir("../frontend/dist/fruitshop-ui"))) // for local
 
 	fmt.Println()
